@@ -1,0 +1,861 @@
+/* Parámetros Globales de Estilo */
+
+/*Etiquetas de Títulos*/
+h1, h2, h3 { font-family: 'Spartan', sans-serif; }
+
+/*Etiquetas Subtítulos, Párrafos y Enlaces*/
+h4, h5, h6, p, a { font-family: 'Spartan', sans-serif; }
+
+/*
+selector {
+    propiedad: valor de propiedad;
+}
+*/
+
+body {
+    
+    width: 100%;
+    height: auto;
+}
+
+
+/* Estilos propios del sitio web */
+aside#menu-cortina {
+    width: 290px;
+    height: 100%;
+    display: none;
+    margin: 0;
+    float: none;
+    position: fixed;
+    
+    top: 0;
+    right: -290px;
+    z-index: 99991;
+    
+    background: rgba(0, 0, 0, 0.85);
+}
+
+aside#menu-cortina a#abrir {
+	width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0;
+    float: none;
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    background: #cc7901;
+    text-decoration: none;
+	transition: all 0.3s ease-in;
+}
+aside#menu-cortina a#abrir i {
+	color: #fff;
+    text-align: center;
+    display: block;
+    padding: 11px 0;
+    font-size: 1.35em;
+	transition: all 0.3s ease-in;
+}
+aside#menu-cortina a#abrir:hover {
+	background: #000;
+	transition: all 0.3s ease-in;
+}
+aside#menu-cortina a#abrir:hover i {
+	color: #cc7901;
+	transition: all 0.3s ease-in;
+}
+
+aside#menu-cortina a#cerrar {
+	width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0;
+    float: none;
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    background: #cc7901;
+    text-decoration: none;
+	transition: all 0.3s ease-in;
+}
+aside#menu-cortina a#cerrar i {
+	color: #fff;
+    text-align: center;
+    display: block;
+    padding: 11px 0;
+    font-size: 1.35em;
+	transition: all 0.3s ease-in;
+}
+aside#menu-cortina a#cerrar:hover {
+	background: #000;
+	transition: all 0.3s ease-in;
+}
+aside#menu-cortina a#cerrar:hover i {
+	color: #cc7901;
+	transition: all 0.3s ease-in;
+}
+
+aside#menu-cortina nav#menu-principal-movil {
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: 10%;
+    float: none;
+    position: relative;
+}
+aside#menu-cortina nav#menu-principal-movil a {
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    font-size: 1.15em;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    font-weight: 600;
+	transition: all 0.3s ease-in;
+}
+aside#menu-cortina nav#menu-principal-movil a:hover {
+	color: #cc7901;
+	transition: all 0.3s ease-in;
+}
+
+/* 6 Propiedades del Modelo de Cajas:
+    width       Anchura                         px / % / vw
+    height      Altura                          px / % / vh
+    display     Confirmación de Despliegue      block / none / flex / inline / inline-block
+    margin      Margen                          px / %              top - right - bottom -left
+    float       Flotación                       left / none / right
+    position    Posición                        relative / fixed / absolute / sticky (JS)
+*/
+
+header {
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    z-index: 99990;                     /* -99999 | 0 | 99999 */
+    
+    background: #911;                /* Color de fondo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+header article {                        /*Anchura fija:*/
+       width: 100%;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+
+header article a#logo {
+        width: 100%;
+    /* height: 45px; */
+    display: block;
+    margin: 15px 27px 27px 0; */
+    float: left;
+    position: absolute;
+    transition: all 0.3s ease-out;   /* Propiedad que varía / Tiempo en segundos / Efecto */
+}
+header article a#logo:hover {
+    opacity: 0.5;
+    transform: scale(0.95) rotate(-2deg);
+    transition: all 0.3s ease-out;
+}
+header article a#logo img {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+
+header article nav#menu-principal {
+   width: 600px;
+    height: 47px;
+    display: block;
+    margin: 54px 0px 0px 0px;
+    float: right;
+    position: relative;
+}
+header article nav#menu-principal a {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+    padding: 14px 15px;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-principal a:hover {
+    color: #fff;
+    background: #cc7901;
+    border-bottom: solid 3px #333;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-principal a.activo {
+    color: #fff;
+    background: #cc7901;
+    border-bottom: solid 3px #333;
+    transition: all 0.3s ease-out;
+}
+
+header article nav#menu-idiomas {
+    width: 103px;
+    height: 30px;
+    display: block;
+    margin: 10px 0 0 0;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+header article nav#menu-idiomas a {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+    padding: 1px 9px;
+    text-decoration: none;
+    color: #cc7901;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-idiomas a:hover {
+    color: #333;
+    border-bottom: solid 2px #333;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-idiomas a#idioma-activo {
+    color: #333;
+    border-bottom: solid 2px #333;
+    transition: all 0.3s ease-out;
+}
+header article nav#menu-idiomas span {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+    font-weight: 800;
+}
+
+
+aside#redes-sociales {
+   width: 0px;
+    /* height: 30px; */
+    display: block;
+    margin: 100px 0px;
+    float: left;
+    position: fixed;
+    /* top: 0; */
+    /* right: 100px; */
+    z-index: 2;
+}
+aside#redes-sociales nav#menu-redes-sociales {
+       width: auto;
+    height: auto;
+    display: block;
+    /* margin: 0 3px; */
+    float: left;
+    position: relative;
+    background: #911;
+}
+
+aside#redes-sociales nav#menu-redes-sociales a {
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 3px;
+    float: left;
+    position: relative;
+    padding: 0;
+    text-decoration: none;
+    background: #911;
+    padding: 6px 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1em;
+    border-radius: 50%;
+    letter-spacing: -0.02em;
+    transition: all 0.3s ease-out;
+}
+
+aside#redes-sociales nav#menu-redes-sociales a i {
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+aside#redes-sociales nav#menu-redes-sociales a:hover {
+    background: #333;
+    transition: all 0.3s ease-out;
+}
+aside#redes-sociales nav#menu-redes-sociales a:hover i {
+    color: #cc7901;
+    transition: all 0.3s ease-out;
+}
+
+
+main {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 100px auto 0 auto;
+    float: none;
+    position: relative;
+}
+
+/*CSS de Slider*/
+main section#fila-slider {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 100px 0px;
+}
+main section#fila-slider article.slick-inicio {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+main section#fila-slider article.slick-inicio div.slide {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+}
+
+main section#fila-slider article.slick-inicio div#slide-01 {
+    background: url("../img/modalidad%201.jpeg") no-repeat top center;
+    background-size: cover;
+}
+main section#fila-slider article.slick-inicio div#slide-02 {
+    background: url("../img/modalidad%202.jpeg") no-repeat top center;
+    background-size: cover;
+}
+main section#fila-slider article.slick-inicio div#slide-03 {
+    background: url("../img/trabajo%203D%20mesa.jpeg") no-repeat top center;
+    background-size: cover;
+}
+main section#fila-slider article.slick-inicio div#slide-04 {
+    background: url("../img/trabajo%202%20corte.jpeg") no-repeat top center;
+    background-size: cover;
+}
+
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco { 
+
+ width: 50%;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    color: #000;
+    line-height: 1em;
+    background: #00000078;
+    
+}
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco h1 { 
+
+    height: 50px;
+    display: block;
+    margin: 200px 0px 0px 0px;
+    position: relative;
+    padding: 30px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3em;
+
+    
+}
+main section#fila-slider article.slick-inicio div.slide div#recuadro-blanco h2 {
+
+ width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.4em;
+    letter-spacing: -0.02em;
+    
+}
+
+main section#fila-slider .slick-dots {
+    bottom: 30px !important;
+}
+main section#fila-slider .slick-dots li button:before {
+    font-size: 13px !important;
+    opacity: 0.7 !important;
+    color: #09f !important;
+}
+main section#fila-slider .slick-dots li.slick-active button:before {
+    color: #fff !important;
+}
+main section#fila-slider .slick-prev {
+    left: 25px;
+    z-index: 9;
+}
+main section#fila-slider .slick-next {
+    right: 25px;
+    z-index: 10;
+}
+main section#fila-slider .slick-next:before,
+main section#fila-slider .slick-prev:before { font-size: 25px; }
+
+
+
+
+
+
+
+
+
+main section#fila-img-instagram {
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+}
+
+main section#fila-img-instagram article#columna-ilustrador {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-ilustrador img {
+     width: 252px;
+    height: 252px;
+    display: block;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-ilustrador h5 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-ilustrador p {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 250px 0;
+}
+main section#fila-img-instagram article a {
+    width: 326px;
+    height: 326px;
+    display: inline-block;
+    margin: 20px;
+    float: left;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a img {
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+	filter: grayscale(1);
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover {
+    transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover img {
+	filter: grayscale(0);
+	transform: scale(1.1);
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+
+
+
+main section#fila-img-instagram article#columna-photoshop {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-photoshop img {
+     width: 252px;
+    height: 252px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-photoshop h5 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+}
+
+main section#fila-img-instagram article#columna-photoshop p {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 250px 0;
+}
+main section#fila-img-instagram article a {
+    width: 326px;
+    height: 326px;
+    display: inline-block;
+    margin: 20px;
+    float: left;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a img {
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+	filter: grayscale(1);
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover {
+    transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover img {
+	filter: grayscale(0);
+	transform: scale(1.1);
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+
+
+main section#fila-img-instagram article#columna-premier {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-premier img {
+     width: 252px;
+    height: 252px;
+    display: block;
+    margin: 0 auto;
+    float: right;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-premier h5 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: right;
+    position: relative;
+    padding: 50px 0;
+    text-align: right
+}
+
+main section#fila-img-instagram article#columna-premier p {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: right;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 250px 0;
+}
+main section#fila-img-instagram article a {
+    width: 326px;
+    height: 326px;
+    display: inline-block;
+    margin: 20px;
+    float: left;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a img {
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+	filter: grayscale(1);
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover {
+    transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover img {
+	filter: grayscale(0);
+	transform: scale(1.1);
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+
+
+main section#fila-img-instagram article#columna-after {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-after img {
+     width: 252px;
+    height: 252px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article#columna-after h5 {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: right;
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+}
+
+main section#fila-img-instagram article#columna-after p {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 50px 0;
+}
+
+main section#fila-img-instagram article {
+    width: 100%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+    padding: 250px 0;
+}
+main section#fila-img-instagram article a {
+    width: 326px;
+    height: 326px;
+    display: inline-block;
+    margin: 20px;
+    float: left;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a img {
+	width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    position: relative;
+	filter: grayscale(1);
+	transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover {
+    transition: all 0.2s ease-in;
+}
+main section#fila-img-instagram article a:hover img {
+	filter: grayscale(0);
+	transform: scale(1.1);
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+
+/* Responsive: */
+/*
+Escritorio      >= 1200px
+Tablets         <= 1199px --- >= 500px
+Móviles         <= 499px --- >= 340px
+
+Media-Queries + Breakpoints
+*/
+
+/* Aplica para el rango 1199px a 1100px */
+@media only screen and (max-width: 1199px){
+	aside#menu-cortina { display: block; }
+	
+	
+	header { height: 70px; }
+	header article { width: 100%; }
+	header article nav#menu-principal { display: none; }
+	header article nav#menu-redes-sociales { display: none; }
+	header article a#logo { width: 70px; height: 70px; margin: 0px; }
+	header article nav#menu-idiomas { top: 18px; right: 50px; }
+	
+	
+	main { margin: 70px auto 0 auto; }
+    main section#fila-quien-soy { height: auto; }
+    main section#fila-quien-soy article {
+        width: 80%;
+        height: 500px;
+    }
+	
+	main section#fila-img-instagram article { width: 732px; height: 1835px; }
+}
+
+@media only screen and (max-width: 1099px){
+    
+}
+
+@media only screen and (max-width: 999px){
+    
+}
+
+@media only screen and (max-width: 899px){
+    
+}
+
+@media only screen and (max-width: 799px){
+	main section#fila-img-instagram article { width: 80%; height: auto; }
+	main section#fila-img-instagram article a { width: 100%; height: auto; display: block; margin: 0 auto 40px; float: none; }
+}
+
+@media only screen and (max-width: 699px){
+    
+}
+
+@media only screen and (max-width: 599px){
+    header article nav#menu-idiomas { display: none; }
+}
+
+@media only screen and (max-width: 499px){
+    
+}
+
+@media only screen and (max-width: 449px){
+    
+}
+
+@media only screen and (max-width: 399px){
+    
+}
+
+@media only screen and (max-width: 349px){
+    
+}
